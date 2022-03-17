@@ -132,7 +132,6 @@ form {
   margin-bottom: 1rem;
   width: 100%;
   font-size: 1.2rem;
-  font-weight: 500;
 }
 
 .inputs {
@@ -141,20 +140,28 @@ form {
   width: 40%;
   font-size: 0.7rem;
   text-transform: uppercase;
-  opacity: 50%;
-  // border: 10px solid $clr-accent;
 }
 
 label {
-  font-size: 0.75rem;
-  text-transform: uppercase;
+  opacity: 50%;
 }
 
-// .inputs input[type="text"]:invalid,
-// .inputs input[type="email"]:invalid {
-//   border: 1px solid $clr-error;
-//   color: $clr-error;
-// }
+input {
+  border: 1px solid $clr-border;
+  border-radius: 3px;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid $clr-accent;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.123);
+}
+
+input[type="text"]:invalid,
+input[type="email"]:invalid {
+  // border: 1px solid $clr-error;
+  color: $clr-error;
+}
 
 .cta {
   padding-left: 3rem;
