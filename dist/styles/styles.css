@@ -44,6 +44,84 @@ a:hover {
   flex: 1;
 }
 
+form {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 3rem;
+  margin-bottom: 3rem;
+  background-color: #f9fafb;
+  font-weight: 600;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.123);
+}
+
+.form-content {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.form-title {
+  margin-bottom: 1rem;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.inputs {
+  display: flex;
+  flex-flow: column wrap;
+  width: 40%;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+label {
+  opacity: 50%;
+}
+
+input {
+  border: 1px solid #e5e7eb;
+  border-radius: 3px;
+  padding: 0.3rem;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #e5e7eb;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #0e55b5;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.123);
+}
+
+input:valid {
+  background: url(/assets/img/box-tick.svg);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #fff;
+  border: 1px solid #0e55b5;
+}
+
+input:invalid:focus {
+  border: 1px solid #d55c5f;
+}
+
+input:focus:valid {
+  border: 1px solid #0e55b5;
+}
+
 .logo--section {
   position: absolute;
   top: 25%;
@@ -87,58 +165,6 @@ a:hover {
   color: #343a40;
   max-width: 80%;
   margin-bottom: 1.75rem;
-}
-
-form {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  padding-left: 3rem;
-  margin-bottom: 3rem;
-  background-color: #f9fafb;
-  font-weight: 600;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.123);
-}
-
-.form-content {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.form-title {
-  margin-bottom: 1rem;
-  width: 100%;
-  font-size: 1.2rem;
-}
-
-.inputs {
-  display: flex;
-  flex-flow: column wrap;
-  width: 40%;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-}
-
-label {
-  opacity: 50%;
-}
-
-input {
-  border: 1px solid #e5e7eb;
-  border-radius: 3px;
-}
-
-input:focus {
-  outline: none;
-  border: 1px solid #0e55b5;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.123);
-}
-
-input[type=text]:required:invalid,
-input[type=email]:invalid {
-  border: 1px solid #d55c5f;
 }
 
 .cta {

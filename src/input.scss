@@ -29,7 +29,7 @@ $clr-error: #d55c5f;
   src: url(/assets/fonts/norse-bold-webfont.woff) format("woff");
 }
 
-// General Styles
+// Global Styles
 body {
   font-family: $font-primary;
   font-size: 1.5rem;
@@ -45,7 +45,7 @@ a:hover {
   font-weight: $fw-bold;
 }
 
-// Sections
+// Main Layout
 .container {
   display: flex;
 }
@@ -62,6 +62,89 @@ a:hover {
 
 .Form--content {
   flex: 1;
+}
+
+// Form Styles
+form {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 3rem;
+  margin-bottom: 3rem;
+  background-color: $clr-bkg-light;
+  font-weight: $fw-semi-bold;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.123);
+}
+
+.form-content {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.form-title {
+  margin-bottom: 1rem;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.inputs {
+  display: flex;
+  flex-flow: column wrap;
+  width: 40%;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+label {
+  opacity: 50%;
+}
+
+// General Input Styles
+input {
+  border: 1px solid $clr-border;
+  border-radius: 3px;
+  padding: 0.3rem;
+}
+
+// Resets Browser Autocomplete Styles
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid $clr-border;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+// On Focus
+input:focus {
+  outline: none;
+  border: 1px solid $clr-accent;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.123);
+}
+
+// Form Vaildation
+input:valid {
+  background: url(/assets/img/box-tick.svg);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: $clr-light;
+  border: 1px solid $clr-accent;
+}
+
+input:invalid:focus {
+  border: 1px solid $clr-error;
+}
+
+input:focus:valid {
+  border: 1px solid $clr-accent;
 }
 
 // Components
@@ -110,59 +193,6 @@ a:hover {
   margin-bottom: 1.75rem;
 }
 
-form {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  padding-left: 3rem;
-  margin-bottom: 3rem;
-  background-color: $clr-bkg-light;
-  font-weight: $fw-semi-bold;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.123);
-}
-
-.form-content {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.form-title {
-  margin-bottom: 1rem;
-  width: 100%;
-  font-size: 1.2rem;
-}
-
-.inputs {
-  display: flex;
-  flex-flow: column wrap;
-  width: 40%;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-}
-
-label {
-  opacity: 50%;
-}
-
-input {
-  border: 1px solid $clr-border;
-  border-radius: 3px;
-}
-
-input:focus {
-  outline: none;
-  border: 1px solid $clr-accent;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.123);
-}
-
-input[type="text"]:required:invalid,
-input[type="email"]:invalid {
-  border: 1px solid $clr-error;
-  // color: $clr-error;
-}
-
 .cta {
   padding-left: 3rem;
   margin-bottom: 1rem;
@@ -199,6 +229,7 @@ button:hover {
   border: 1px solid $clr-accent;
 }
 
+// Media Queries
 @media (max-width: 700px) {
   .container {
     display: flex;

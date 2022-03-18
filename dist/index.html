@@ -49,13 +49,14 @@
           <div class="form-content">
             <p class="form-title">Let's do this!</p>
             <div class="inputs">
-              <label for="last-name">Last Name</label><br />
+              <label for="last-name">Surname</label><br />
               <input
                 id="last-name"
                 name="last-name"
                 type="text"
-                minlength="5"
-                maxlength="20"
+                minlength="1"
+                maxlength="35"
+                title="Please enter your surname"
                 required
               />
             </div>
@@ -66,47 +67,60 @@
                 id="first-name"
                 name="first-name"
                 type="text"
-                minlength="5"
-                maxlength="20"
+                minlength="1"
+                maxlength="35"
+                title="Please enter your first name"
                 required
               />
             </div>
 
             <div class="inputs">
-              <label for="">Email</label><br />
+              <label for="email">Email</label><br />
               <input
                 id="email"
                 name="email"
                 type="email"
                 placeholder="rory@example.com"
+                title="Please use a valid email address"
                 required
               />
             </div>
 
             <div class="inputs">
-              <label for="">Phone Number</label><br />
+              <label for="phone-number">Phone Number</label><br />
               <input
                 type="text"
+                inputmode="numeric"
                 name="phone-number"
                 id="phone-number"
-                pattern="[0-9]+"
+                pattern="[0-9]{10}"
+                title="Please enter a 10 digit phone number"
+                required
               />
             </div>
 
             <div class="inputs">
-              <label for="passwoinrd">Password</label><br />
+              <label for="password">Password</label><br />
               <input
                 id="password"
                 name="password"
                 type="password"
-                autocomplete="new-password"
+                minlength="8"
+                title="Your password should be at least 8 characters long"
                 required
               />
             </div>
 
             <div class="inputs">
-              <label for="">Confirm Password</label><br />
-              <input id="password" name="password" type="password" required />
+              <label for="confirm-password">Confirm Password</label><br />
+              <input
+                id="confirm-password"
+                name="confirm-password"
+                type="password"
+                minlength="8"
+                title="Your password should be at least 8 characters long"
+                required
+              />
             </div>
           </div>
         </form>
